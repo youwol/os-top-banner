@@ -1,6 +1,6 @@
 {
     "name": "@youwol/os-top-banner",
-    "version": "0.0.1-wip",
+    "version": "0.0.1",
     "description": "Top banner & related components to use in YouWol applications",
     "author": "greinisch@youwol.com",
     "keywords": [
