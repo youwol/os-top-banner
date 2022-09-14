@@ -20,8 +20,8 @@ template = Template(
     dependencies=Dependencies(
         runTime=RunTimeDeps(
             load={
-                "@youwol/flux-view": "^1.0.0",
-                "@youwol/os-core": "^0.1.0",
+                "@youwol/flux-view": "^1.0.3",
+                "@youwol/os-core": "^0.1.1",
             }
         ),
         devTime={}

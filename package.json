@@ -1,7 +1,7 @@
 {
     "name": "@youwol/os-top-banner",
     "description": "Top banner & related components to use in YouWol applications.",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "author": "greinisch@youwol.com",
     "homepage": "https://github.com/youwol/os-top-banner#README.md",
     "main": "dist/@youwol/os-top-banner.js",
@@ -58,13 +58,13 @@
         ]
     },
     "dependencies": {
-        "@youwol/flux-view": "^1.0.0",
-        "@youwol/os-core": "^0.1.0"
+        "@youwol/flux-view": "^1.0.3",
+        "@youwol/os-core": "^0.1.1"
     },
     "youwol": {
         "cdnDependencies": {
-            "@youwol/flux-view": "^1.0.0",
-            "@youwol/os-core": "^0.1.0"
+            "@youwol/flux-view": "^1.0.3",
+            "@youwol/os-core": "^0.1.1"
         }
     }
 }
