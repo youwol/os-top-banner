@@ -10,8 +10,8 @@ folder_path = Path(__file__).parent
 pkg_json = parse_json(folder_path / 'package.json')
 
 load_dependencies = {
-    "@youwol/flux-view": "^1.0.3",
-    "@youwol/os-core": "^0.1.1",
+    "@youwol/flux-view": "^1.1.0",
+    "@youwol/os-core": "^0.1.6",
 }
 template = Template(
     path=folder_path,
