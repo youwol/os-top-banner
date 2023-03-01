@@ -46,7 +46,7 @@ const entries = {
 export const setup = {
     name:'@youwol/os-top-banner',
         assetId:'QHlvdXdvbC9vcy10b3AtYmFubmVy',
-    version:'0.1.2-wip',
+    version:'0.1.2',
     shortDescription:"Top banner & related components to use in YouWol applications.",
     developerDocumentation:'https://platform.youwol.com/applications/@youwol/cdn-explorer/latest?package=@youwol/os-top-banner',
     npmPackage:'https://www.npmjs.com/package/@youwol/os-top-banner',
@@ -92,7 +92,7 @@ export const setup = {
         const parameters = installParameters || {}
         const scripts = [
             ...(parameters.scripts || []),
-            `@youwol/os-top-banner#0.1.2-wip~dist/@youwol/os-top-banner/${entry.name}.js`
+            `@youwol/os-top-banner#0.1.2~dist/@youwol/os-top-banner/${entry.name}.js`
         ]
         const modules = [
             ...(parameters.modules || []),
