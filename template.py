@@ -11,7 +11,7 @@ pkg_json = parse_json(folder_path / 'package.json')
 
 load_dependencies = {
     "@youwol/flux-view": "^1.1.0",
-    "@youwol/os-core": "^0.1.6",
+    "@youwol/os-core": "^0.1.12",
 }
 template = Template(
     path=folder_path,
