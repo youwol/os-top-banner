@@ -2,7 +2,7 @@
 const runTimeDependencies = {
     "externals": {
         "@youwol/flux-view": "^1.1.0",
-        "@youwol/os-core": "^0.1.6"
+        "@youwol/os-core": "^0.1.12"
     },
     "includedInBundle": {}
 }
@@ -48,7 +48,7 @@ export const setup = {
         assetId:'QHlvdXdvbC9vcy10b3AtYmFubmVy',
     version:'0.1.2',
     shortDescription:"Top banner & related components to use in YouWol applications.",
-    developerDocumentation:'https://platform.youwol.com/applications/@youwol/cdn-explorer/latest?package=@youwol/os-top-banner',
+    developerDocumentation:'https://platform.youwol.com/applications/@youwol/cdn-explorer/latest?package=@youwol/os-top-banner&tab=doc',
     npmPackage:'https://www.npmjs.com/package/@youwol/os-top-banner',
     sourceGithub:'https://github.com/youwol/os-top-banner',
     userGuide:'https://l.youwol.com/doc/@youwol/os-top-banner',
@@ -63,7 +63,7 @@ export const setup = {
     },
 
     installMainModule: ({cdnClient, installParameters}:{
-        cdnClient:{install:(unknown) => Promise<Window>},
+        cdnClient:{install:(unknown) => Promise<WindowOrWorkerGlobalScope>},
         installParameters?
     }) => {
         const parameters = installParameters || {}
@@ -82,7 +82,7 @@ export const setup = {
     },
     installAuxiliaryModule: ({name, cdnClient, installParameters}:{
         name: string,
-        cdnClient:{install:(unknown) => Promise<Window>},
+        cdnClient:{install:(unknown) => Promise<WindowOrWorkerGlobalScope>},
         installParameters?
     }) => {
         const entry = secondaryEntries[name]

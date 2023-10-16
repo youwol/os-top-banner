@@ -48,12 +48,13 @@
     },
     "dependencies": {
         "@youwol/flux-view": "^1.1.0",
-        "@youwol/os-core": "^0.1.6"
+        "@youwol/os-core": "^0.1.12"
     },
-    "youwol": {
-        "cdnDependencies": {
+    "webpm": {
+        "dependencies": {
             "@youwol/flux-view": "^1.1.0",
-            "@youwol/os-core": "^0.1.6"
-        }
+            "@youwol/os-core": "^0.1.12"
+        },
+        "aliases": []
     }
 }

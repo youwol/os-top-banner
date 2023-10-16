@@ -3,7 +3,7 @@ from pathlib import Path
 
 from youwol.pipelines.pipeline_typescript_weback_npm import Template, PackageType, Dependencies, \
     RunTimeDeps, generate_template, Bundles, MainModule
-from youwol_utils import parse_json
+from youwol.utils import parse_json
 
 folder_path = Path(__file__).parent
 
@@ -11,7 +11,7 @@ pkg_json = parse_json(folder_path / 'package.json')
 
 load_dependencies = {
     "@youwol/flux-view": "^1.1.0",
-    "@youwol/os-core": "^0.1.6",
+    "@youwol/os-core": "^0.1.12",
 }
 template = Template(
     path=folder_path,
