@@ -1,7 +1,7 @@
 {
     "name": "@youwol/os-top-banner",
     "description": "Top banner & related components to use in YouWol applications.",
-    "version": "0.1.2",
+    "version": "0.2.0-wip",
     "author": "greinisch@youwol.com",
     "homepage": "https://github.com/youwol/os-top-banner#README.md",
     "main": "dist/@youwol/os-top-banner.js",
