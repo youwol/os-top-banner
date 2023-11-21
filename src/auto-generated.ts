@@ -1,30 +1,30 @@
 
 const runTimeDependencies = {
     "externals": {
-        "@youwol/flux-view": "^1.1.0",
-        "@youwol/os-core": "^0.1.12"
+        "@youwol/rx-vdom": "^1.0.1",
+        "@youwol/os-core": "^0.2.0"
     },
     "includedInBundle": {}
 }
 const externals = {
-    "@youwol/flux-view": {
-        "commonjs": "@youwol/flux-view",
-        "commonjs2": "@youwol/flux-view",
-        "root": "@youwol/flux-view_APIv1"
+    "@youwol/rx-vdom": {
+        "commonjs": "@youwol/rx-vdom",
+        "commonjs2": "@youwol/rx-vdom",
+        "root": "@youwol/rx-vdom_APIv1"
     },
     "@youwol/os-core": {
         "commonjs": "@youwol/os-core",
         "commonjs2": "@youwol/os-core",
-        "root": "@youwol/os-core_APIv01"
+        "root": "@youwol/os-core_APIv02"
     }
 }
 const exportedSymbols = {
-    "@youwol/flux-view": {
+    "@youwol/rx-vdom": {
         "apiKey": "1",
-        "exportedSymbol": "@youwol/flux-view"
+        "exportedSymbol": "@youwol/rx-vdom"
     },
     "@youwol/os-core": {
-        "apiKey": "01",
+        "apiKey": "02",
         "exportedSymbol": "@youwol/os-core"
     }
 }
@@ -32,7 +32,7 @@ const exportedSymbols = {
 const mainEntry : {entryFile: string,loadDependencies:string[]} = {
     "entryFile": "./index.ts",
     "loadDependencies": [
-        "@youwol/flux-view",
+        "@youwol/rx-vdom",
         "@youwol/os-core"
     ]
 }
@@ -46,13 +46,13 @@ const entries = {
 export const setup = {
     name:'@youwol/os-top-banner',
         assetId:'QHlvdXdvbC9vcy10b3AtYmFubmVy',
-    version:'0.1.2',
+    version:'0.2.1-wip',
     shortDescription:"Top banner & related components to use in YouWol applications.",
     developerDocumentation:'https://platform.youwol.com/applications/@youwol/cdn-explorer/latest?package=@youwol/os-top-banner&tab=doc',
     npmPackage:'https://www.npmjs.com/package/@youwol/os-top-banner',
     sourceGithub:'https://github.com/youwol/os-top-banner',
     userGuide:'https://l.youwol.com/doc/@youwol/os-top-banner',
-    apiVersion:'01',
+    apiVersion:'02',
     runTimeDependencies,
     externals,
     exportedSymbols,
@@ -77,7 +77,7 @@ export const setup = {
             modules,
             scripts,
         }).then(() => {
-            return window[`@youwol/os-top-banner_APIv01`]
+            return window[`@youwol/os-top-banner_APIv02`]
         })
     },
     installAuxiliaryModule: ({name, cdnClient, installParameters}:{
@@ -92,7 +92,7 @@ export const setup = {
         const parameters = installParameters || {}
         const scripts = [
             ...(parameters.scripts || []),
-            `@youwol/os-top-banner#0.1.2~dist/@youwol/os-top-banner/${entry.name}.js`
+            `@youwol/os-top-banner#0.2.1-wip~dist/@youwol/os-top-banner/${entry.name}.js`
         ]
         const modules = [
             ...(parameters.modules || []),
@@ -103,7 +103,7 @@ export const setup = {
             modules,
             scripts,
         }).then(() => {
-            return window[`@youwol/os-top-banner/${entry.name}_APIv01`]
+            return window[`@youwol/os-top-banner/${entry.name}_APIv02`]
         })
     },
     getCdnDependencies(name?: string){

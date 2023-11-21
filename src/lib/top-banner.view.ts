@@ -1,4 +1,4 @@
-import { VirtualDOM } from '@youwol/flux-view'
+import { VirtualDOM, ChildrenLike, AnyVirtualDOM } from '@youwol/rx-vdom'
 import { ChildApplicationAPI, isPlatformInstance } from '@youwol/os-core'
 
 /**
@@ -10,22 +10,23 @@ import { ChildApplicationAPI, isPlatformInstance } from '@youwol/os-core'
  * *    a burger menu with common actions ([[BurgerMenu]])
  *
  */
-export class TopBannerView implements VirtualDOM {
+export class TopBannerView implements VirtualDOM<'div'> {
     static ClassSelector = 'top-banner-view'
     static baseClass = `w-100 position-relative fv-bg-background d-flex fv-text-primary justify-content-between align-self-center  border-bottom ${TopBannerView.ClassSelector}`
+    public readonly tag = 'div'
     public readonly class: string
     public readonly style = {
         minHeight: '50px',
         display: 'd-flex',
     }
-    public readonly children: Array<VirtualDOM>
-    public readonly innerView: VirtualDOM = {}
+    public readonly children: ChildrenLike
+    public readonly innerView: AnyVirtualDOM = { tag: 'div' }
 
     /**
      * @params params Parameters
      * @param params.innerView inner view of the top-banner
      */
-    constructor(params: { innerView?: VirtualDOM }) {
+    constructor(params: { innerView?: VirtualDOM<'div'> }) {
         Object.assign(this, params)
         const instanceId = ChildApplicationAPI.getAppInstanceId()
         const youwolOS = ChildApplicationAPI.getOsInstance()
@@ -33,8 +34,8 @@ export class TopBannerView implements VirtualDOM {
         if (instanceId && isPlatformInstance(youwolOS)) {
             youwolOS.setTopBannerViews(instanceId, {
                 actionsView: this.innerView,
-                youwolMenuView: {},
-                userMenuView: {},
+                youwolMenuView: { tag: 'div' },
+                userMenuView: { tag: 'div' },
             })
             this.class = 'd-none'
             return

@@ -10,8 +10,8 @@ folder_path = Path(__file__).parent
 pkg_json = parse_json(folder_path / 'package.json')
 
 load_dependencies = {
-    "@youwol/flux-view": "^1.1.0",
-    "@youwol/os-core": "^0.1.12",
+    "@youwol/rx-vdom": "^1.0.1",
+    "@youwol/os-core": "^0.2.0",
 }
 template = Template(
     path=folder_path,
@@ -41,8 +41,15 @@ shutil.copyfile(
     src=folder_path / '.template' / 'src' / 'auto-generated.ts',
     dst=folder_path / 'src' / 'auto-generated.ts'
 )
-for file in ['README.md', '.gitignore', '.npmignore', '.prettierignore', 'LICENSE', 'package.json',
-             'tsconfig.json', 'webpack.config.ts']:
+for file in [
+    'README.md',
+    '.gitignore',
+    '.npmignore',
+    '.prettierignore',
+    'LICENSE',
+    'package.json',
+    # 'tsconfig.json', references `rx-vdom-config.ts`
+    'webpack.config.ts']:
     shutil.copyfile(
         src=folder_path / '.template' / file,
         dst=folder_path / file
