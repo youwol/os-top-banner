@@ -1,31 +1,31 @@
 
 const runTimeDependencies = {
     "externals": {
-        "@youwol/rx-vdom": "^1.0.1",
-        "@youwol/os-core": "^0.2.0"
+        "@youwol/os-core": "^0.2.0",
+        "@youwol/rx-vdom": "^1.0.1"
     },
     "includedInBundle": {}
 }
 const externals = {
-    "@youwol/rx-vdom": {
-        "commonjs": "@youwol/rx-vdom",
-        "commonjs2": "@youwol/rx-vdom",
-        "root": "@youwol/rx-vdom_APIv1"
-    },
     "@youwol/os-core": {
         "commonjs": "@youwol/os-core",
         "commonjs2": "@youwol/os-core",
         "root": "@youwol/os-core_APIv02"
+    },
+    "@youwol/rx-vdom": {
+        "commonjs": "@youwol/rx-vdom",
+        "commonjs2": "@youwol/rx-vdom",
+        "root": "@youwol/rx-vdom_APIv1"
     }
 }
 const exportedSymbols = {
-    "@youwol/rx-vdom": {
-        "apiKey": "1",
-        "exportedSymbol": "@youwol/rx-vdom"
-    },
     "@youwol/os-core": {
         "apiKey": "02",
         "exportedSymbol": "@youwol/os-core"
+    },
+    "@youwol/rx-vdom": {
+        "apiKey": "1",
+        "exportedSymbol": "@youwol/rx-vdom"
     }
 }
 
